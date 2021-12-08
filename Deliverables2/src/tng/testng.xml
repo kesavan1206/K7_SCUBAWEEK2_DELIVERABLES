@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
+<suite name="Suite">  
+<test name="Annotations">  
+<classes>  
+<class name="tng.Annotationstng"/>  
+</classes>  
+</test> <!-- Grptng --> 
+<test name="Group A">  
+<groups>  
+<run>  
+<include name="Group A"/>  
+</run>  
+</groups>  
+<classes>  
+<class name="tng.Groupingtng"/>  
+</classes>  
+</test> <!-- Grptng -->  
+<test name="Group B">  
+<groups>  
+<run>  
+<include name="Group B"/>  
+</run>  
+</groups>  
+<classes>  
+<class name="tng.Groupingtng"/>  
+</classes>  
+</test> <!--Grptng -->
+<test name="Group C">  
+<groups>  
+<run>  
+<exclude name="Group A" />
+<exclude name="Group B" />
+</run>  
+</groups>  
+<classes>  
+<class name="tng.Groupingtng"/>  
+</classes>  
+</test> <!-- Grptng -->  
+<test name ="Parameterization">
+<parameter name = "myName" value="Kesavan Sakthivel"/>
+<classes> 
+<class name="tng.Parameterstng"/>  
+</classes> 
+</test> <!-- Grptng --> 
+<test name ="Assertions">
+<classes>  
+<class name="tng.Assertionstng"/>  
+</classes> 
+</test> <!-- Grptng -->
+<test name ="Dataproviders">
+<classes>  
+<class name="tng.Dataproviderstng"/>  
+</classes> 
+</test> <!-- Grptng -->
+</suite> <!-- Suite --> 
